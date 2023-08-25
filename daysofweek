@@ -1,0 +1,6 @@
+fun main() {
+    
+    val dias= listOf("Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira", "Sexta-feira","Sábado","Domingo")
+    println("O primeiro dia da semana é ${dias[6]}")
+}
+
