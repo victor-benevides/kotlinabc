@@ -1,0 +1,32 @@
+fun main() {
+
+    println("*****LANCHONETE DO VITÃO*****")
+    println("100 - Cachorro quente - R$1,20 ")
+    println("101 - Bauru simples - R$1,30 ")
+    println("102 - Bauru com ovo - R$1,50 ")
+    println("103 - Hambúrger - R$1,20 ")
+    println("104 - Cachorro quente - R$1,30 ")
+    println("105 - Refrigerante - R$1,00 ")
+
+ 
+
+    println("Escolha o código do produto")
+    var cod_produto: Int = readLine().toString().toInt();
+
+    println("Digite a quantidade")
+
+    var quant: Int = readLine().toString().toInt();
+    var total:Double = 0.0
+
+
+    when (cod_produto) {
+            100 -> total = total + (1.20 * quant)
+            101 -> total = total + (1.30 * quant)
+            102 -> total = total + (1.50 * quant)
+            103 -> total = total + (1.20 * quant)
+            104 -> total = total + (1.30 * quant)
+            105 -> total = total + (1.00 * quant)
+            else -> println("Código de item inválido.")
+            }
+            println("Total a ser pago: R$ $total")
+}
