@@ -1,0 +1,90 @@
+open class Animal ( ) { 
+    open fun tipo () : String
+    {
+        return "bichinho de Deus"
+    }
+    open fun come () : String 
+    { 
+         return "o que der" 
+    }
+    open fun som (): String
+    {
+         return "vocalização"  
+    }
+}
+
+// implementa a classe cão que herda os //métodos da classe mãe e os reescreve
+class Cao : Animal( )
+{
+    override public fun tipo () : String
+    {
+        return "cao"
+    }
+    override public fun come() : String
+    {
+        return "ração"  
+    }
+    override public fun som (): String
+    {
+        return "au au "  
+    }
+}
+
+class Gato : Animal( )
+{  
+    override fun tipo () : String 
+    {
+        return "gato"
+    }
+    override fun come() : String
+    {
+        return "rato"  
+    }
+    override fun som () : String
+    {
+        return "miau miau "  
+    }
+}
+class Rato : Animal( )
+{
+    override fun tipo () : String
+    {
+        return "rato"
+    }
+    override fun come() : String
+    {
+        return "queijo"
+    }
+    override fun som () : String
+    {
+        return "fric fric fric "  
+    }
+}
+
+// implementa o programa principal
+fun main ()
+{
+
+     var animal : Animal 
+     var cao = Cao()
+     var gato = Gato()
+     var rato = Rato()
+     
+     animal = cao
+     println(animal.tipo())
+     println(animal.come())
+     println(animal.som())
+     println ("\n\n\n")
+     
+     animal = gato
+     println(animal.tipo())
+     println(animal.come())
+     println(animal.som())
+     println ("\n\n\n")
+    
+     animal = rato
+     println(animal.tipo())
+     println(animal.come())
+     println(animal.som())
+     println ("\n\n\n")
+}
