@@ -1,90 +1,75 @@
-open class Animal ( ) { 
-    open fun tipo () : String
-    {
-        return "bichinho de Deus"
+open class Animal(val nome: String) {
+    open fun oQueCome() {
+        println("$nome come alguma coisa.")
     }
-    open fun come () : String 
-    { 
-         return "o que der" 
+
+    open fun qualFamilia() {
+        println("$nome pertence a alguma família.")
     }
-    open fun som (): String
-    {
-         return "vocalização"  
+
+    open fun qualSomFaz() {
+        println("$nome faz algum som.")
     }
 }
 
-// implementa a classe cão que herda os //métodos da classe mãe e os reescreve
-class Cao : Animal( )
-{
-    override public fun tipo () : String
-    {
-        return "cao"
+class Cao(nome: String) : Animal(nome) {
+    override fun oQueCome() {
+        println("$nome come ração e petiscos.")
     }
-    override public fun come() : String
-    {
-        return "ração"  
+
+    override fun qualFamilia() {
+        println("$nome pertence à família dos doguinhos.")
     }
-    override public fun som (): String
-    {
-        return "au au "  
+
+    override fun qualSomFaz() {
+        println("$nome faz auau.")
     }
 }
 
-class Gato : Animal( )
-{  
-    override fun tipo () : String 
-    {
-        return "gato"
+class Gato(nome: String) : Animal(nome) {
+    override fun oQueCome() {
+        println("$nome come whiskas nos dias bons.")
     }
-    override fun come() : String
-    {
-        return "rato"  
+
+    override fun qualFamilia() {
+        println("$nome pertence à família dos felinos e bixanos.")
     }
-    override fun som () : String
-    {
-        return "miau miau "  
-    }
-}
-class Rato : Animal( )
-{
-    override fun tipo () : String
-    {
-        return "rato"
-    }
-    override fun come() : String
-    {
-        return "queijo"
-    }
-    override fun som () : String
-    {
-        return "fric fric fric "  
+
+    override fun qualSomFaz() {
+        println("$nome faz o som miau.")
     }
 }
 
-// implementa o programa principal
-fun main ()
-{
+class Rato(nome: String) : Animal(nome) {
+    override fun oQueCome() {
+        println("$nome come o que der, inclusive lixo.")
+    }
 
-     var animal : Animal 
-     var cao = Cao()
-     var gato = Gato()
-     var rato = Rato()
-     
-     animal = cao
-     println(animal.tipo())
-     println(animal.come())
-     println(animal.som())
-     println ("\n\n\n")
-     
-     animal = gato
-     println(animal.tipo())
-     println(animal.come())
-     println(animal.som())
-     println ("\n\n\n")
-    
-     animal = rato
-     println(animal.tipo())
-     println(animal.come())
-     println(animal.som())
-     println ("\n\n\n")
+    override fun qualFamilia() {
+        println("$nome pertence à família dos Roedores.")
+    }
+
+    override fun qualSomFaz() {
+        println("$nome faz snic snic.")
+    }
+}
+
+fun main() {
+    val cao = Cao("Boby")
+    val gato = Gato("Estrela")
+    val rato = Rato("Splinter")
+
+    cao.oQueCome()
+    cao.qualFamilia()
+    cao.qualSomFaz()
+    println ("\n\n")
+
+    gato.oQueCome()
+    gato.qualFamilia()
+    gato.qualSomFaz()
+    println ("\n\n")
+
+    rato.oQueCome()
+    rato.qualFamilia()
+    rato.qualSomFaz()
 }
